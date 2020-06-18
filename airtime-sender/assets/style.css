@@ -1,10 +1,32 @@
 .container{
-    border: 2px solid rebeccapurple;
+    border: none;
     width: 70%;
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 .form{
     margin: 0 auto;
-    border: 2px solid rebeccapurple;
+}
+
+form input {
+    width: 100%;
+}
+
+#form-input, #network, #airtime {
+    width: 500px;
+}
+
+/* media quarry */
+@media screen and (max-width: 600px) {
+    #form-input, #network, #airtime {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #form-input, #network, #airtime {
+        width: 200px;
+    }
 }
