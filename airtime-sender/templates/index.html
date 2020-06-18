@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="container">
+    <form method="POST">
+        <div class="form-group">
+            <label for="formAirtimeAmount">Airtime Amount</label>
+            <input name="airtimeAmount" type="text" class="form-control" id="airtimeAmount" placeholder="Enter Airtime amount">
+        </div>
+        <div class="form-group">
+            <label for="formPhoneNumber">Phone Number</label>
+            <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Enter Phone Number">
+        </div>
+        <button id="sendSMS" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
