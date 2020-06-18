@@ -1,21 +1,23 @@
 .container{
-    border: none;
+    border: 2px solid rebeccapurple;
     width: 70%;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
+
+.container{
+    border: 2px solid rebeccapurple;
+    width: 70%;
+    margin-top: 40px;
+}
+
 .form{
     margin: 0 auto;
-}
-
-form input {
-    width: 100%;
-}
-
-#form-input, #network, #airtime {
-    width: 500px;
+    border: 2px solid rebeccapurple;
 }
 
 /* media quarry */
