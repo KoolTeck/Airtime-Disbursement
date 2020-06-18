@@ -17,3 +17,16 @@ form input {
 #form-input, #network, #airtime {
     width: 500px;
 }
+
+/* media quarry */
+@media screen and (max-width: 600px) {
+    #form-input, #network, #airtime {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #form-input, #network, #airtime {
+        width: 200px;
+    }
+}
