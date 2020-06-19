@@ -37,12 +37,14 @@ for($i = 0; $i <= $total; $i++){
 //loop through recipients sending airtime to each
 
 for($i = 0; $i <= $total; $i++){
-	$response = $airtimeObj->sendAirtime($phoneArray[$i], $amountArray[$i]);
-	if($response["data"]->responses["0"]->status == "Sent"){
-		echo "<div class='card'><div class='card-body'>".$response["data"]->responses["0"]->phoneNumber .": Airtime worth ".$response["data"]->responses["0"]->amount ." successfully purchased.</div></div><br>";		
+	$results = $airtimeObj->sendAirtime($phoneArray[$i], $amountArray[$i]);
+
+	$response = $results["data"]->responses["0"];
+	if($response->status == "Sent"){
+		echo "<div class='card'><div class='card-body'>".$response->phoneNumber .": Airtime worth ".$response->amount ." successfully purchased.</div></div><br>";		
 	}
 	else{
-		echo "<div class='card'><div class='card-body'>".$response["data"]->responses["0"]->phoneNumber .": " .$response["data"]->responses["0"]->errorMessage."</div></div>";
+		echo "<div class='card'><div class='card-body'>".$response->phoneNumber .": " .$response->errorMessage."</div></div>";
 	}
 
 }
