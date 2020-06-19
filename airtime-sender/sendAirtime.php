@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+	<div class="container">
 <?php
 
 require "helpers/AirtimeSender.php";
@@ -37,16 +38,22 @@ for($i = 0; $i <= $total; $i++){
 
 for($i = 0; $i <= $total; $i++){
 	$response = $airtimeObj->sendAirtime($phoneArray[$i], $amountArray[$i]);
-	echo $response["status"] ."<br>";
+	if($response["data"]->responses["0"]->status == "Sent"){
+		echo "<div class='card'><div class='card-body'>".$response["data"]->responses["0"]->phoneNumber .": Airtime worth ".$response["data"]->responses["0"]->amount ." successfully purchased.</div></div><br>";		
+	}
+	else{
+		echo "<div class='card'><div class='card-body'>".$response["data"]->responses["0"]->phoneNumber .": " .$response["data"]->responses["0"]->errorMessage."</div></div>";
+	}
+
 }
 
 
 ?>
 <br>
 <div class="row">
-	<a class="btn btn-info btn-block" href="index.php">Send again</a>	
+	<a class="btn btn-info btn-block btn-lg" href="index.php">Send again</a>	
 </div>
-
+</div>
 	</body>
 </html>
 
