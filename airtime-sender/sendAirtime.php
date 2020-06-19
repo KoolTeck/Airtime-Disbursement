@@ -11,17 +11,17 @@ $airtime = $AT->airtime();
 
 
 
-    $recipients = [[
-    "phoneNumber"  => $_POST["phone"],
-    "currencyCode"       => "KES",
-    "amount"       =>$_POST["amount"]
-    ]];
-    try {
-        $results = $airtime->send([
-            "recipients" => $recipients
-        ]);
-        print_r($results);
-    } catch(Exception $e) {
-        echo "Error: ".$e->getMessage();
-    }
+$recipients = [[
+"phoneNumber"  => $_POST["phone"],
+"currencyCode"       => "KES",
+"amount"       =>$_POST["amount"]
+]];
+try {
+    $results = $airtime->send([
+        "recipients" => $recipients
+    ]);
+    print_r($results);
+} catch(Exception $e) {
+    echo "Error: ".$e->getMessage();
+}
 
