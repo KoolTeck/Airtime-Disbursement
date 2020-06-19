@@ -1,5 +1,6 @@
 {
     "require": {
-        "africastalking/africastalking": "^2.3"
+        "africastalking/africastalking": "^2.3",
+        "phpoffice/phpspreadsheet": "^1.13"
     }
 }
