@@ -46,8 +46,6 @@ body{
     text-align: center;
 }
 .logo{
-    background: url('./images/hng-logo.jpg')center no-repeat;
-    background-size: cover;
     height: 40px;
     width: 40px;
     border-radius: 5px;
@@ -77,7 +75,7 @@ select{
 .fieldset input:focus,select:focus{
     border-color:#555 ;
 }
-button{
+.send{
     padding: 10px 20px;
     border: 0;
     background-image:linear-gradient(to right, rgb(1, 154, 255),#555) ;
@@ -89,6 +87,9 @@ button{
     width:100%;
     transition: background-image linear 1s;
     font-weight: 600;
+    outline: 0 !important;
+    border: none !important;
+    -moz-outline-style: none !important;
 }
 input:hover,
 select:hover,
@@ -96,7 +97,7 @@ style{
     transform: scale(1.02);
     border-color: #555;
 }
-button:hover{
+.send:hover{
     background-image:linear-gradient(to right, #555,rgb(1, 154, 255))
 }
 @media screen and (min-width:500px){
